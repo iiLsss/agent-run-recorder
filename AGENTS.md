@@ -29,6 +29,33 @@ Follow the formatter and linter selected with the first implementation. Commit t
 
 Use `kebab-case` for directories and general filenames, `camelCase` for variables and functions, and `PascalCase` for types or classes where the chosen language supports them.
 
+## Languages & Toolchain
+
+The current project uses the following languages and file formats:
+
+| Language / format | Current role | Rules |
+|---|---|---|
+| TypeScript (`.ts`) | Application data, types, tests, and Vite configuration | Keep `strict` type checking enabled; avoid `any`; prefer explicit domain types. |
+| TypeScript + JSX (`.tsx`) | React components and application entry points | Use typed props; keep rendering, state, and business logic separated by responsibility. |
+| JavaScript (`.js`) | Tooling configuration, currently ESLint config | Use ESM `import`/`export`; do not add application logic in JavaScript when TypeScript is appropriate. |
+| CSS (`.css`) | Frontend styles and design tokens | Keep global styles small; organize feature styles near their owning feature; reuse design variables. |
+| HTML (`.html`) | Vite document entry point | Keep the document semantic and minimal; do not put application logic or large inline styles in it. |
+| JSON (`.json`) | `package.json`, TypeScript configuration, and lockfile | Use valid JSON and two-space indentation; update `package-lock.json` through npm rather than editing it manually. |
+| Markdown (`.md`) | Product documentation and project instructions | Keep headings structured, lines readable, and technical claims aligned with the implementation. |
+
+The current runtime and build toolchain is Node.js + npm + Vite + React + Vitest + ESLint + TypeScript ESLint. Use the existing npm scripts and do not introduce a second package manager without an explicit project decision.
+
+There is currently no Rust/Tauri, Python, Go, PHP, or backend implementation in this repository. If a backend or desktop shell is introduced, document its language, build commands, directory ownership, and test requirements in this file before adding substantial code.
+
+### Language-specific boundaries
+
+- New product code belongs in TypeScript or TSX. JavaScript is reserved for tooling files that require it.
+- Keep domain data and shared types out of TSX page components; use feature-level `data.ts`, `types.ts`, selectors, or utilities.
+- Keep React component files named in `PascalCase`; use `camelCase` for non-component modules and functions.
+- Keep CSS class names semantic and stable. Avoid styling by generated DOM structure or meaningless names.
+- Keep `index.html` as the document shell. React owns application markup after `#root`.
+- Treat configuration and lockfiles as generated or structured artifacts: make the smallest intentional change and verify the corresponding npm or TypeScript command.
+
 ## Frontend Engineering Rules
 
 ### General principles
