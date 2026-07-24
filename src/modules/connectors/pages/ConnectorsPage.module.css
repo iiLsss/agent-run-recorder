@@ -1,0 +1,300 @@
+.page {
+  height: 100%;
+  padding: var(--space-4) var(--space-5) calc(var(--status-bar-height) + var(--space-2));
+  overflow: auto;
+  scrollbar-color: var(--color-border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.notice {
+  margin-bottom: var(--space-2);
+  padding: 0.4375rem 0.75rem;
+  color: #71d2c7;
+  font-size: 0.5625rem;
+  background: var(--color-success-soft);
+  border: 0.0625rem solid rgb(38 166 154 / 24%);
+  border-radius: var(--radius-sm);
+}
+
+.connectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.625rem;
+}
+
+.connectorCard,
+.connectorCardWarning {
+  min-height: 7.25rem;
+  padding: 0.6875rem 0.75rem;
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 1%), transparent 45%),
+    var(--color-surface);
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.connectorCardWarning {
+  background:
+    linear-gradient(135deg, rgb(255 166 87 / 2.5%), transparent 48%),
+    var(--color-surface);
+  border-color: rgb(255 166 87 / 22%);
+}
+
+.connectorHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.connectorHeader > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.connectorHeader strong {
+  font-size: 0.6875rem;
+}
+
+.connectorHeader span {
+  color: var(--color-text-muted);
+  font-size: 0.5rem;
+}
+
+.toggle,
+.toggleOn {
+  width: 1.6875rem;
+  height: 0.9375rem;
+  padding: 0.125rem;
+  background: #292c32;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background var(--motion-fast);
+}
+
+.toggle span,
+.toggleOn span {
+  display: block;
+  width: 0.6875rem;
+  height: 0.6875rem;
+  background: #8d929c;
+  border-radius: 50%;
+  transition:
+    background var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.toggleOn {
+  background: rgb(38 166 154 / 30%);
+}
+
+.toggleOn span {
+  background: #53c6b9;
+  transform: translateX(0.75rem);
+}
+
+.connectorBadges {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+}
+
+.connectorCard p,
+.connectorCardWarning p {
+  margin: 0.4375rem 0 0;
+  color: #6e737d;
+  font-size: 0.5rem;
+  line-height: 1.35;
+}
+
+.connectorMeta {
+  font-family: var(--font-mono);
+}
+
+.warningText {
+  color: var(--color-warning) !important;
+}
+
+.healthGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.625rem;
+  margin-top: 0.875rem;
+}
+
+.healthCard {
+  min-height: 6.25rem;
+  padding: 0.6875rem 0.75rem;
+  background: var(--color-surface);
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.healthCard header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 0.625rem;
+  color: var(--color-text-secondary);
+}
+
+.healthCard b {
+  font-size: 0.625rem;
+  font-weight: 520;
+}
+
+.healthCard p,
+.healthCard small {
+  display: block;
+  margin: 0.4375rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.5rem;
+}
+
+.progress {
+  position: relative;
+  height: 0.1875rem;
+  margin-top: 0.4375rem;
+  background: #202329;
+  border-radius: 0.25rem;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+  border-radius: inherit;
+}
+
+.progress i {
+  position: absolute;
+  top: -0.125rem;
+  left: 80%;
+  width: 0.0625rem;
+  height: 0.4375rem;
+  background: var(--color-warning);
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  background: rgb(0 0 0 / 64%);
+  backdrop-filter: blur(0.3125rem);
+}
+
+.modal {
+  width: 26.875rem;
+  overflow: hidden;
+  background: #111316;
+  border: 0.0625rem solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-overlay);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9375rem var(--space-4);
+  border-bottom: 0.0625rem solid #23262c;
+}
+
+.modalHeader span {
+  color: var(--color-accent-strong);
+  font-size: 0.5625rem;
+}
+
+.modalHeader h2 {
+  margin: 0.1875rem 0 0;
+  font-size: var(--space-4);
+}
+
+.modalOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  padding: 0.875rem;
+}
+
+.modalOptions button {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 3.75rem;
+  padding: 0.625rem;
+  color: var(--color-text-secondary);
+  text-align: left;
+  background: #16181c;
+  border: 0.0625rem solid #272a31;
+  border-radius: 0.4375rem;
+  cursor: pointer;
+}
+
+.modalOptions button:hover {
+  border-color: rgb(119 130 230 / 55%);
+}
+
+.modalOptions button > span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.modalOptions small {
+  color: var(--color-text-muted);
+  font-size: 0.5rem;
+}
+
+.modalNote {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 2.625rem;
+  padding: 0 var(--space-4);
+  color: #797e88;
+  font-size: 0.5625rem;
+  background: #0d0f11;
+  border-top: 0.0625rem solid #202329;
+}
+
+.planBody {
+  padding: 0.875rem var(--space-4);
+  color: var(--color-text-secondary);
+  font-size: 0.625rem;
+  line-height: 1.55;
+}
+
+.planBody code {
+  color: var(--color-accent-strong);
+  font-family: var(--font-mono);
+}
+
+.planBody ul {
+  margin: 0.625rem 0;
+  padding-left: 1.125rem;
+}
+
+.planActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.75rem var(--space-4);
+  background: #0d0f11;
+  border-top: 0.0625rem solid #202329;
+}
+
+.planNote {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: 0.5625rem;
+}

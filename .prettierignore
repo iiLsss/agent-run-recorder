@@ -1,0 +1,6 @@
+dist/
+node_modules/
+coverage/
+package-lock.json
+docs/product-requirements.md
+src-tauri/gen/schemas/

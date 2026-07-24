@@ -1,0 +1,34 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4375rem;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 0.3125rem;
+  height: 0.3125rem;
+  background: currentcolor;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.125rem rgb(119 124 135 / 7%);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.partial {
+  color: var(--color-warning);
+}
+
+.failed {
+  color: var(--color-danger);
+}
+
+.cancelled {
+  color: var(--color-text-muted);
+}
+
+.unknown {
+  color: var(--color-text-secondary);
+}

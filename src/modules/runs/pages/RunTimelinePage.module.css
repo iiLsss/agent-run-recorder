@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4) var(--space-5) calc(var(--status-bar-height) + var(--space-2));
+  overflow: auto;
+  scrollbar-color: var(--color-border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.notice {
+  margin-bottom: var(--space-2);
+  padding: 0.4375rem 0.75rem;
+  color: #71d2c7;
+  font-size: 0.5625rem;
+  background: var(--color-success-soft);
+  border: 0.0625rem solid rgb(38 166 154 / 24%);
+  border-radius: var(--radius-sm);
+}

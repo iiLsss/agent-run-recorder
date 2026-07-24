@@ -1,0 +1,62 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          { "key": "service.name", "value": { "stringValue": "claude-code" } },
+          { "key": "service.version", "value": { "stringValue": "2.1.179" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "timeUnixNano": "1784880100000000000",
+              "body": { "stringValue": "claude_code.user_prompt" },
+              "attributes": [
+                {
+                  "key": "session.id",
+                  "value": { "stringValue": "claude-session-fixture" }
+                },
+                {
+                  "key": "prompt.id",
+                  "value": { "stringValue": "claude-turn-fixture" }
+                },
+                { "key": "event.id", "value": { "stringValue": "claude-event-start" } },
+                {
+                  "key": "prompt",
+                  "value": { "stringValue": "FORBIDDEN_CLAUDE_PROMPT" }
+                }
+              ]
+            },
+            {
+              "timeUnixNano": "1784880106000000000",
+              "body": { "stringValue": "claude_code.api_request" },
+              "attributes": [
+                {
+                  "key": "session.id",
+                  "value": { "stringValue": "claude-session-fixture" }
+                },
+                {
+                  "key": "prompt.id",
+                  "value": { "stringValue": "claude-turn-fixture" }
+                },
+                {
+                  "key": "request_id",
+                  "value": { "stringValue": "claude-request-fixture" }
+                },
+                { "key": "model", "value": { "stringValue": "claude-sonnet" } },
+                { "key": "input_tokens", "value": { "intValue": "90" } },
+                { "key": "output_tokens", "value": { "intValue": "32" } },
+                {
+                  "key": "response",
+                  "value": { "stringValue": "FORBIDDEN_CLAUDE_RESPONSE" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

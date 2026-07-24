@@ -1,0 +1,59 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          { "key": "service.name", "value": { "stringValue": "gemini-cli" } },
+          { "key": "service.version", "value": { "stringValue": "0.0-fixture" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "timeUnixNano": "1784880200000000000",
+              "body": { "stringValue": "gemini_cli.api_request" },
+              "attributes": [
+                {
+                  "key": "sessionId",
+                  "value": { "stringValue": "gemini-session-fixture" }
+                },
+                {
+                  "key": "prompt_id",
+                  "value": { "stringValue": "gemini-turn-fixture" }
+                },
+                { "key": "event_id", "value": { "stringValue": "gemini-event-start" } },
+                {
+                  "key": "request_text",
+                  "value": { "stringValue": "FORBIDDEN_GEMINI_PROMPT" }
+                }
+              ]
+            },
+            {
+              "timeUnixNano": "1784880204000000000",
+              "body": { "stringValue": "gemini_cli.api_response" },
+              "attributes": [
+                {
+                  "key": "sessionId",
+                  "value": { "stringValue": "gemini-session-fixture" }
+                },
+                {
+                  "key": "prompt_id",
+                  "value": { "stringValue": "gemini-turn-fixture" }
+                },
+                { "key": "event_id", "value": { "stringValue": "gemini-event-end" } },
+                { "key": "model", "value": { "stringValue": "gemini-2.5-pro" } },
+                { "key": "input_token_count", "value": { "intValue": "70" } },
+                { "key": "output_token_count", "value": { "intValue": "18" } },
+                {
+                  "key": "response_text",
+                  "value": { "stringValue": "FORBIDDEN_GEMINI_RESPONSE" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

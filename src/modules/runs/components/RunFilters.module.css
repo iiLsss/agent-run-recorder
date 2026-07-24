@@ -1,0 +1,71 @@
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 0.4375rem;
+  margin-bottom: 0.75rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  height: 1.6875rem;
+  padding: 0 1.5625rem 0 0.5625rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  background: #111316;
+  border: 0.0625rem solid #21242a;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.select select {
+  appearance: none;
+  color: #b4b8c0;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.select select:focus {
+  outline: 0;
+}
+
+.select svg {
+  position: absolute;
+  right: 0.4375rem;
+  pointer-events: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  width: 9.375rem;
+  height: 1.6875rem;
+  margin-left: auto;
+  padding: 0 var(--space-2);
+  color: var(--color-text-muted);
+  background: #111316;
+  border: 0.0625rem solid #21242a;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.search input {
+  min-width: 0;
+  color: var(--color-text);
+  background: none;
+  border: 0;
+}
+
+.search input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.search input:focus {
+  outline: 0;
+}

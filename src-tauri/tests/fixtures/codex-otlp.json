@@ -1,0 +1,62 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          { "key": "service.name", "value": { "stringValue": "codex" } },
+          { "key": "service.version", "value": { "stringValue": "0.146.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "timeUnixNano": "1784880000000000000",
+              "body": { "stringValue": "codex.user_prompt" },
+              "attributes": [
+                {
+                  "key": "conversation.id",
+                  "value": { "stringValue": "codex-session-fixture" }
+                },
+                {
+                  "key": "prompt.id",
+                  "value": { "stringValue": "codex-turn-fixture" }
+                },
+                { "key": "event.id", "value": { "stringValue": "codex-event-start" } },
+                {
+                  "key": "prompt",
+                  "value": { "stringValue": "FORBIDDEN_CODEX_PROMPT" }
+                }
+              ]
+            },
+            {
+              "timeUnixNano": "1784880005000000000",
+              "body": { "stringValue": "codex.api_request" },
+              "attributes": [
+                {
+                  "key": "conversation.id",
+                  "value": { "stringValue": "codex-session-fixture" }
+                },
+                {
+                  "key": "prompt.id",
+                  "value": { "stringValue": "codex-turn-fixture" }
+                },
+                {
+                  "key": "request_id",
+                  "value": { "stringValue": "codex-request-fixture" }
+                },
+                { "key": "model", "value": { "stringValue": "gpt-5" } },
+                { "key": "input_token_count", "value": { "intValue": "120" } },
+                { "key": "output_token_count", "value": { "intValue": "44" } },
+                {
+                  "key": "output",
+                  "value": { "stringValue": "FORBIDDEN_CODEX_OUTPUT" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "resourceLogs": [
+    {
+      "resource": {
+        "attributes": [
+          { "key": "service.name", "value": { "stringValue": "opencode" } },
+          { "key": "service.version", "value": { "stringValue": "plugin-0.1.0" } }
+        ]
+      },
+      "scopeLogs": [
+        {
+          "logRecords": [
+            {
+              "timeUnixNano": "1784880300000000000",
+              "body": { "stringValue": "opencode.session.created" },
+              "attributes": [
+                {
+                  "key": "session.id",
+                  "value": { "stringValue": "opencode-session-fixture" }
+                },
+                {
+                  "key": "event.id",
+                  "value": { "stringValue": "opencode-event-start" }
+                },
+                {
+                  "key": "message.content",
+                  "value": { "stringValue": "FORBIDDEN_OPENCODE_MESSAGE" }
+                }
+              ]
+            },
+            {
+              "timeUnixNano": "1784880309000000000",
+              "body": { "stringValue": "opencode.session.idle" },
+              "attributes": [
+                {
+                  "key": "session.id",
+                  "value": { "stringValue": "opencode-session-fixture" }
+                },
+                { "key": "event.id", "value": { "stringValue": "opencode-event-end" } },
+                {
+                  "key": "tool.output",
+                  "value": { "stringValue": "FORBIDDEN_OPENCODE_OUTPUT" }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
